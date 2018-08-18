@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Meds Tracker</title>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:900|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="Styles/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="Scripts/script.js"></script>
+</head>
+<body>
+
+	<!-- Webpage Title -->
+	<div class="title">
+		<h1>My Medicine Tracker</h1>
+	</div>
+
+	<!-- The Main App Area Start -->
+	<main class="main-display">
+
+		<!-- Add Medicine Button / Open Modal Input -->
+		<button id="addMedBtn" class="add-med-btn">Add Medicine</button>
+
+		<!-- Unordered List of Medicine Start -->
+		<ul id="med-list-ID">
+			
+			<!-- Medicine list, Items get dynamically added here -->
+			<li class="med-list-item"><span class="remove-med">&times;</span><span class="med-name">Methotrexate</span> <button class="add-rem minus">-</button> <span class="med-qty">0</span> <button class="add-rem plus">+</button></li>
+
+		</ul>
+		<!-- Unordered List of Medicine End -->
+
+	</main>
+	<!-- The Main App Area End -->
+
+	<!-- Add Medicine Modal Start -->
+	<div id="mainModal" class="modal">
+		
+		<!-- Modal Content Start -->
+		<div class="modal-content">
+			<form>
+				<label class="visuallyhidden" for="add-user-med">Enter medicine name to add to tracker</label>
+				<input type="text" id="add-user-med" class="user-input user-input-name" placeholder="Enter medicine name..." required>
+				<label class="visuallyhidden" for="add-user-med-qty">Enter starting quantity of medicine</label>
+				<input type="number" id="add-user-med-qty" class="user-input user-input-qty" placeholder="Enter Quantity" min="0" max="999" required>
+				<input type="submit" class="user-input user-input-submit" value="Add Medicine">
+			</form>
+			<span id="closeModal" class="close-modal">&times;</span>
+		</div>
+		<!-- Modal Content End -->
+
+	</div>
+	<!-- Add Medicine Modal End -->
+
+	
+</body>
+</html>
